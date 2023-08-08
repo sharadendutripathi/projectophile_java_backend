@@ -33,9 +33,9 @@ public class JwtRequest {
 		this.password = password;
 	}
 
-	public JwtRequest(String email, String password) {
+	public JwtRequest(String number, String password) {
 		super();
-		this.number = email;
+		this.number = number;
 		this.password = password;
 	}
 
