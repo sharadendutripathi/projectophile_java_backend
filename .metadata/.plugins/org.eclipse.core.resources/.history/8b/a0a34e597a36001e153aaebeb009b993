@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package com.project.backend.models;
+
+import java.util.List;
+
+import org.springframework.security.core.GrantedAuthority;
+
+import lombok.Builder;
+
+/**
+ * @author Sharadendu
+ *
+ */
+@Builder
+public class JwtResponse {
+
+	/**
+	 * 
+	 */
+	
+	private String jwtToken;
+
+	
+
+	private String username;
+	
+	private List<GrantedAuthority> userRole;
+	
+	
+	public JwtResponse(String jwtToken, String username, List<GrantedAuthority> userRole) {
+		this.jwtToken = jwtToken;
+		this.username = username;
+		this.userRole = userRole;
+	}
+
+	public String getJwtToken() {
+		return jwtToken;
+	}
+
+	public void setJwtToken(String jwtToken) {
+		this.jwtToken = jwtToken;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	@Override
+	public String toString() {
+		return "JwtResponse [jwtToken=" + jwtToken + ", username=" + username + "]";
+	}
+
+	
+
+}
